@@ -1,0 +1,238 @@
+-- Bare Bone DML to populate the CLYSTMS DB of 
+-- HW #5 solution of CSCI 4333.1 Fall 2016
+
+insert into Coach(FName, LName, Phone, EMail)
+    values('Joe', 'Smith', '713-222-9413', 'joesmile_1061@gmail.com');
+insert into Coach(FName, LName, Phone, EMail)
+    values('Jane', 'Smith', '713-222-9414', 'janesmile_1061@gmail.com');
+insert into Coach(FName, LName, Phone, EMail)
+    values('Paul', 'Lam', '713-486-2011', 'paulkkk@hotmail.com');
+insert into Coach(FName, LName, Phone, EMail)
+    values('Paulina', 'Hall', '832-486-1997', 'paulinathenice@yahoo.com');
+insert into Coach(FName, LName, Phone, EMail)
+    values('Katrina', 'Bajaj', '832-117-2435', 'KatrinaBajaj@gmail.com');
+    
+    
+insert into Caretaker(FName, LName, Phone, EMail)
+    values('Azalea', 'Khan', '832-116-2992', 'theAKhan@gmail.com');
+insert into Caretaker(FName, LName, Phone, EMail)
+    values('Joseph', 'Khan', '832-116-2993', 'theJKhan@gmail.com');
+insert into Caretaker(FName, LName, Phone, EMail)
+    values('Jim', 'Khan', '832-116-2994', 'theJKhan2@gmail.com');
+insert into Caretaker(FName, LName, Phone, EMail)
+    values('Katie', 'Johnson', '713-014-0090', 'KatieJohnson1010@yahoo.com');
+insert into Caretaker(FName, LName, Phone, EMail)
+    values('Elizabeth', 'Johnson', '713-014-2090', 'EJohnson5111@yahoo.com');
+
+
+insert into Level (LevelId, Level, Description)
+    values(1, 'Green', 'First Level');
+insert into Level (LevelId, Level, Description)
+    values(2, 'Blue', 'Second level');
+insert into Level (LevelId, Level, Description)
+    values(3, 'Yellow', 'Third level');
+insert into Level (LevelId, Level, Description)
+    values(4, 'Pink', 'Fourth level');
+insert into Level (LevelId, Level, Description)
+    values(5, 'Orange', 'Fifth level');
+insert into Level (LevelId, Level, Description)
+    values(6, 'Lime', 'Six level');
+insert into Level (LevelId, Level, Description)
+    values(7, 'Purple', 'Seventh level');
+insert into Level (LevelId, Level, Description)
+    values(8, 'Red', 'Eigth level');
+insert into Level (LevelId, Level, Description)
+    values(9, 'Brown', 'Ninth level');
+insert into Level (LevelId, Level, Description)
+    values(10, 'Black', 'Tenth level');
+    
+
+insert into Venue(Name, Address, City, State, ZipCode, Phone)
+    values('UHCL', '2700 Bay Area Boulevard', 'Houston','Texas', 
+        '77058', '281-283-3700');
+insert into Venue(Name, Address, City, State, ZipCode, Phone)
+    values('CLHS', '3300 Bay Area Boulevard', 'Houston', 'Texas',
+        '77059', '713-126-4544');
+    
+    
+insert into Swimmer(FName, LName, Phone, EMail, JoinTime, CurrentLevelId, Main_CT_Id, Main_CT_Since)
+    values('Bobby', 'Khan', '832-116-2992', 'theBKhan1@gmail.com',
+        '2014-2-12', 3, 1, '2014-2-12');
+insert into Swimmer(FName, LName, Phone, EMail, JoinTime, CurrentLevelId, Main_CT_Id, Main_CT_Since)
+    values('Billy', 'Khan', '832-116-2992', 'theBKhan2@gmail.com',
+        '2015-12-12', 2, 1, '2015-12-12');
+insert into Swimmer(FName, LName, Phone, EMail, JoinTime, CurrentLevelId, Main_CT_Id, Main_CT_Since)
+    values('Nina', 'Khan', '832-116-2992', 'theNinaKhan@gmail.com',
+        '2016-5-12', 2, 2, '2016-5-12');
+insert into Swimmer(FName, LName, Phone, EMail, JoinTime, CurrentLevelId, Main_CT_Id, Main_CT_Since)
+    values('Clara', 'Johnson', '713-222-1010', 'ClaraJohnson_11@yahoo.com',
+        '2013-5-12', 3, 4, '2015-5-12');
+insert into Swimmer(FName, LName, Phone, EMail, JoinTime, CurrentLevelId, Main_CT_Id, Main_CT_Since)
+    values('Philip', 'Johnson', '713-222-1010', 'PhilipJohnson_108@yahoo.com',
+        '2015-5-15', 2, 5, '2015-5-15');
+        
+        
+insert into OtherCareTaker(SwimmerId, CT_Id, Since)
+    values(1,2,'2014-2-12');
+insert into OtherCareTaker(SwimmerId, CT_Id, Since)
+    values(1,3,'2014-2-12');
+insert into OtherCareTaker(SwimmerId, CT_Id, Since)
+    values(2,3,'2016-1-3');
+insert into OtherCareTaker(SwimmerId, CT_Id, Since)
+    values(3,1,'2016-5-12');
+insert into OtherCareTaker(SwimmerId, CT_Id, Since)
+    values(3,3,'2016-5-12');
+insert into OtherCareTaker(SwimmerId, CT_Id, Since)
+    values(4,5,'2016-1-12');
+    
+    
+insert into LevelHistory(SwimmerId, LevelId, StartDate, Comment)
+    values(1,1,'2014-2-12','Good spirit');
+insert into LevelHistory(SwimmerId, LevelId, StartDate)
+    values(1,2,'2014-7-15');
+insert into LevelHistory(SwimmerId, LevelId, StartDate, Comment)
+    values(1,3,'2016-1-19','Fast time');
+insert into LevelHistory(SwimmerId, LevelId, StartDate)
+    values(2,1,'2015-12-12');
+insert into LevelHistory(SwimmerId, LevelId, StartDate)
+    values(2,2,'2016-4-15');
+insert into LevelHistory(SwimmerId, LevelId, StartDate)
+    values(3,1,'2016-5-12');
+insert into LevelHistory(SwimmerId, LevelId, StartDate, Comment)
+    values(3,2,'2016-7-12', 'Fast advance');
+insert into LevelHistory(SwimmerId, LevelId, StartDate, Comment)
+    values(4,1,'2013-5-12','Freestyle best');
+insert into LevelHistory(SwimmerId, LevelId, StartDate)
+    values(4,2,'2014-6-1');
+insert into LevelHistory(SwimmerId, LevelId, StartDate)
+    values(4,3,'2015-10-2');
+insert into LevelHistory(SwimmerId, LevelId, StartDate)
+    values(5,1,'2015-5-15');
+insert into LevelHistory(SwimmerId, LevelId, StartDate)
+    values(5,2,'2016-3-15');
+
+        
+insert into Meet(Title, Date, StartTime, EndTime, VenueId, CoachId)
+    values('UHCL Open', '2016-3-3', '09:00:00', '16:00:00', 1, 1);
+insert into Meet(Title, Date, StartTime, EndTime, VenueId, CoachId)
+    values('Shell Trial', '2016-8-4', '08:00:00', '11:00:00', 2, 1);
+        
+
+insert into Event(Title, StartTime, EndTime, MeetId, LevelId)
+    values('50M Butterfly', '09:10:00', '09:30:00', 1, 2);
+insert into Event(Title, StartTime, EndTime, MeetId, LevelId)
+    values('100M Freestyle', '09:40:00', '09:50:00', 1, 2);
+insert into Event(Title, StartTime, EndTime, MeetId, LevelId)
+    values('100M Butterfly', '10:10:00', '10:30:00', 1, 3);
+insert into Event(Title, StartTime, EndTime, MeetId, LevelId)
+    values('200M Freestyle', '10:40:00', '10:50:00', 1, 3);
+insert into Event(Title, StartTime, EndTime, MeetId, LevelId)
+    values('50M Butterfly', '09:10:00', '09:30:00', 2, 2);
+insert into Event(Title, StartTime, EndTime, MeetId, LevelId)
+    values('100M Freestyle', '09:40:00', '09:50:00', 2, 2);
+insert into Event(Title, StartTime, EndTime, MeetId, LevelId)
+    values('100M Butterfly', '10:10:00', '10:30:00', 2, 3);
+insert into Event(Title, StartTime, EndTime, MeetId, LevelId)
+    values('200M Freestyle', '10:40:00', '10:50:00', 2, 3);
+
+
+insert into Participation(SwimmerId, EventId)
+    values(2,1);
+insert into Participation(SwimmerId, EventId, Committed)
+    values(3,1,1);
+insert into Participation(SwimmerId, EventId, Committed, CommitTime, 
+        Participated, Result, Comment, CommentCoachId)
+    values(5,1,1,'2016-2-20 10:00:00', 1, 'Winner', 'Good!', 2);
+insert into Participation(SwimmerId, EventId)
+    values(3,2);
+insert into Participation(SwimmerId, EventId, Committed)
+    values(2,2,1);
+insert into Participation(SwimmerId, EventId, Committed, CommitTime, 
+        Participated, Result, Comment, CommentCoachId)
+    values(5,2,1,'2016-2-20 10:00:00', 1, 'Winner', 'Second winner', 2);
+insert into Participation(SwimmerId, EventId)
+    values(1,3);
+insert into Participation(SwimmerId, EventId, Committed)
+    values(4,3,1);
+insert into Participation(SwimmerId, EventId)
+    values(1,4);
+insert into Participation(SwimmerId, EventId, Committed, CommitTime, 
+        Participated, Result)
+    values(4,5,1,'2016-1-15 12:00:00', 1, 'Runner up');
+
+insert into Participation(SwimmerId, EventId)
+    values(2,5);
+insert into Participation(SwimmerId, EventId, Committed)
+    values(3,5,1);
+insert into Participation(SwimmerId, EventId, Committed, CommitTime, 
+        Participated, Result, Comment, CommentCoachId)
+    values(5,5,1,'2016-3-20 10:00:00', 1, '1:12:20', 'Good!', 1);
+insert into Participation(SwimmerId, EventId, Committed, CommitTime, 
+        Participated, Result, Comment, CommentCoachId)
+    values(2,6,1,'2016-3-9 10:00:00', 1, 'Good', 'Need to focus', 3);
+insert into Participation(SwimmerId, EventId)
+    values(3,6);
+insert into Participation(SwimmerId, EventId, Committed)
+    values(5,6,1);
+insert into Participation(SwimmerId, EventId)
+    values(1,7);
+insert into Participation(SwimmerId, EventId, Committed)
+    values(4,7,1);
+insert into Participation(SwimmerId, EventId, Committed, CommitTime, 
+        Participated, Result)
+    values(1,8,1,'2016-1-21 12:00:00', 1, 'winner');
+insert into Participation(SwimmerId, EventId)
+    values(4,8);
+    
+
+insert into V_TaskList(MeetId, Required, Description)    
+    values(1,0,'UHCL meet volunteer tasks');
+insert into V_TaskList(MeetId, Required, Description, Penalty, PenaltyAmt)    
+    values(2,1,'Shell Trial meet volunteer tasks','3 credits', 0);
+    
+insert into V_Task(VTL_Id, Name, Comment, Num_V)
+    values(1,'Officiating','Must be trained',2);
+insert into V_Task(VTL_Id, Name, Num_V)
+    values(1,'Recording',3);
+insert into V_Task(VTL_Id, Name)
+    values(1,'Diecting traffic');
+insert into V_Task(VTL_Id, Name, Comment, Num_V)
+    values(2,'Officiating','Must be trained',3);
+insert into V_Task(VTL_Id, Name, Num_V)
+    values(2,'Recording',2);
+insert into V_Task(VTL_Id, Name)
+    values(2,'Diecting traffic');
+
+    
+insert into Commitment(CT_Id, VT_Id, CommitTime)
+    values(1,1,'2015-10-10 11:11:12');
+insert into Commitment(CT_Id, VT_Id, CommitTime)
+    values(4,1,'2015-10-11 12:11:20');
+insert into Commitment(CT_Id, VT_Id, CommitTime)
+    values(2,2,'2016-1-10 11:05:12');
+insert into Commitment(CT_Id, VT_Id, CommitTime)
+    values(3,2,'2016-1-11 12:12:20');
+insert into Commitment(CT_Id, VT_Id, CommitTime)
+    values(5,2,'2016-1-17 09:19:25');
+insert into Commitment(CT_Id, VT_Id, CommitTime)
+    values(1,3,'2015-10-10 11:11:12');
+insert into Commitment(CT_Id, VT_Id, CommitTime,CarriedOut,
+        Comment, CommentCoachId)
+    values(1,4,'2016-05-11 11:47:22',1,'Very dependable',1);
+insert into Commitment(CT_Id, VT_Id, CommitTime,CarriedOut,
+        Comment, CommentCoachId)
+    values(4,4,'2016-05-12 06:37:12',0,'Sick and called',1);
+insert into Commitment(CT_Id, VT_Id, CommitTime,CarriedOut,
+        Comment, CommentCoachId)
+    values(5,4,'2016-05-12 06:37:12',1,'Brought fruit',2);
+insert into Commitment(CT_Id, VT_Id, CommitTime,Rescinded)
+    values(2,5,'2016-03-11 11:33:12',1);
+insert into Commitment(CT_Id, VT_Id, CommitTime,Rescinded)
+    values(4,5,'2016-03-17 12:35:14',0);
+insert into Commitment(CT_Id, VT_Id, CommitTime)
+    values(1,5,'2016-05-11 11:47:22');
+insert into Commitment(CT_Id, VT_Id, CommitTime)
+    values(5,6,'2016-06-11 09:15:22');
+
+
+    

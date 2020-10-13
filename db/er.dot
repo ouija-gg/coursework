@@ -1,0 +1,15 @@
+digraph models_diagram {
+    graph[rankdir=LR, overlap=false, splines=true]
+    //struct1 [shape=record, label="Table 0|<f0> ID: integer|<f1> TABLE_1_ID: integer"]
+    struct2 [shape=record, label="Table 1|<f0> ID: integer|<f1> NAME: string"]
+    accStruct1 [
+        shape=none,
+        label=<<TABLE border="1" cellborder="1">
+                <TR><TD port="f0">Account</TD></TR>
+                <TR><TD>id</TD></TR>
+                <TR><TD>user</TD></TR>
+                <TR><TD>password</TD></TR>
+                </TABLE>>
+    ]
+    accStruct1 -> struct2:f1;
+}

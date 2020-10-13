@@ -1,0 +1,15 @@
+## compilation
+gcc -o client client.c
+gcc -o server server.c
+
+###or use the makefile
+make
+
+### execution
+./server
+./client 4 9 3 2
+./client 3 4 23
+./client 392 84 91 39 55
+
+###or use the makefile
+make test

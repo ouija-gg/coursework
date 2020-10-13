@@ -1,0 +1,2 @@
+Lobatto seems to be the most accurate approximation method. 
+While Guassian seems to be the worst.
